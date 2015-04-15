@@ -2,7 +2,9 @@
 
 Pyrocms Google Analytics module is PyroCMS module  based on Codeigniter Framework that collects data from Google Analytics API to generate reports that show the overall effectiveness of internet traffics of Pyrocms CMS with this Module.
 Displays the result data using Highcharts. 
-<br/><strong>The module is still in development stage. The repository is still not complete</strong><br/>
+<br/>
+<br/>
+```<strong>The module is still in development stage. The repository is still not complete</strong><br/><br/>```
 Setup Process:
 
 1. Signup for Google Analytics Account and Developer's Google Console.
