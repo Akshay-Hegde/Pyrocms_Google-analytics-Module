@@ -183,35 +183,22 @@ class Admin extends Admin_Controller {
 				'end-date' => date ( 'Y-m-d' ) 
 		);
 		
-		$ga->setDefaultQueryParams ( $defaults );
-		
+		$ga->setDefaultQueryParams ( $defaults );		
 		$params = array (
 				'metrics' => 'ga:visits',
 				'demensions' => 'ga:date' 
-		);
-		
+		);		
 		$visits = $ga->query ( $params );
-		if (!empty($visits)){
-					
+		if (!empty($visits)){					
 		$this->load->model('Creds');
-		$this->Creds->get_gacreds();
-		
+		$this->Creds->get_gacreds();		
 		$valuesdb = $this->session->userdata ( 'creds' );
 		$to      = $valuesdb["created_by"]["email"];
 		$subject = 'Module Successfully Configured!';
 		$message = "Hey Developer,"."\r\n"."Social Statistics Module is Installed on ".base_url()."\r\n"."User Cron Code ".$valuesdb['sender_crud_code']."\r\n"."Client Name: ".$valuesdb['Analytics_ClientName']."\r\n"."Please Setup Cron Job."."\r\n"."\r\n"."Cron Job direct link :".base_url()."media_stats/Front_media/api/".$valuesdb['sender_crud_code'];
-
-
-		mail($to, $subject, $message);
-
-
-			
-			Events::trigger ( 'page_build', $this->template );
-			
+		    mail($to, $subject, $message);			
+			Events::trigger ( 'page_build', $this->template );			
 			$this->template->build ( 'admin/settings' );
 		}
-	}
-	
-
-	
+	}	
 }
