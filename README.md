@@ -4,7 +4,7 @@ Pyrocms Google Analytics module is PyroCMS module  based on Codeigniter Framewor
 Displays the result data using Highcharts. 
 <br/>
 <br/>
-```he module is still in development stage. The repository is still not complete```
+```This module is still in development stage. The repository is still not complete```
 <br/><br/>
 Setup Process:
 
